@@ -1,5 +1,5 @@
 #!Rscript
-library(jsonlite)
+if (! 'jsonlite' %in% .packages(all.available=TRUE)) {install.packages('jsonlite', type = 'binary', repos='https://cran.case.edu'); library(jsonlite) |> suppressWarnings()} else {library(jsonlite) |> suppressWarnings()}
 
 if (file.exists('words.json')) {
     words <- jsonlite::fromJSON("words.json")
