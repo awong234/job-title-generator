@@ -21,15 +21,14 @@ generate_job_title = function(choices = NULL) {
     out
 }
 
-# choices = c("prefix", "adjective", "superlative", "job type", "title", "suffix")
-choices = c("prefix", "adjective", "job type", "suffix")
+cat(generate_job_title(), '\n')
 
-titles = vector(mode = 'character', length = 1000)
-for (i in 1:1000) {
-    set.seed(i)
-    titles[i] = generate_job_title()
-    cat(i, '\t', titles[i], '\n')
-}
+# titles = vector(mode = 'character', length = 1000)
+# for (i in 1:1000) {
+#     set.seed(i)
+#     titles[i] = generate_job_title()
+#     cat(i, '\t', titles[i], '\n')
+# }
 
 # titles_df = data.frame(
 #     seed = 1:1000,

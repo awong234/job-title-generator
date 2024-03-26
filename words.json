@@ -47,7 +47,7 @@
         "grumpy",
         "bashful",
         "happy",
-        "sneezey"
+        "sneezy"
         ],
     "superlative": [
         "tallest",
@@ -85,8 +85,10 @@
         "herald",
         "king",
         "prime",
+        "broker",
         "admiral",
         "baron",
+        "baroness",
         "duke",
         "duchess",
         "viscount",
@@ -101,14 +103,19 @@
         "of the moon",
         "of the sun",
         "of the sea",
+        "of the earth",
+        "of the woods",
         "of the realm",
         "of all",
         "of excellence",
         "of truth",
+        "of time",
+        "of everything",
         "of power",
         "of the world",
         "the breaker of codes",
         "the great",
+        "stormborn of house targaryen, the first of her name, queen of the andals and the first men, protector of the seven kingdoms, the mother of dragons, the khaleesi of the great grass sea, the unburnt, the breaker of chains",
         "first of their name"
     ],
     "job type": [

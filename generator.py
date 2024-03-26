@@ -1,6 +1,5 @@
 #!python
 import json
-import roman
 import pandas as pd
 from random import choices as sample
 from random import seed
@@ -24,15 +23,40 @@ def generate_job_title(choices = None):
     my_sample = [sample(words[x])[0] for x in choices]
     my_sample = ' '.join(my_sample)
     rank = sample([x for x in range(6,30)])[0]
-    rank = roman.toRoman(rank)
+    rank = int_to_roman(rank)
     my_sample = my_sample + ' ' + rank
     return my_sample
 
-titles = []
-for i in range(0, 1000):
-    seed(i)
-    titles.append(generate_job_title())
-    print(i, titles[i])
+ROMAN = [
+    (1000, "M"),
+    ( 900, "CM"),
+    ( 500, "D"),
+    ( 400, "CD"),
+    ( 100, "C"),
+    (  90, "XC"),
+    (  50, "L"),
+    (  40, "XL"),
+    (  10, "X"),
+    (   9, "IX"),
+    (   5, "V"),
+    (   4, "IV"),
+    (   1, "I"),
+]
+
+def int_to_roman(number):
+    result = ""
+    for (arabic, roman) in ROMAN:
+        (factor, number) = divmod(number, arabic)
+        result += roman * factor
+    return result
+
+print(generate_job_title())
+
+# titles = []
+# for i in range(0, 1000):
+#     seed(i)
+#     titles.append(generate_job_title())
+#     print(i, titles[i])
 
 # titles_df = pd.DataFrame({
 #     "seed": [x for x in range(0, 1000)],
