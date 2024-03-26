@@ -15,7 +15,7 @@ generate_job_title = function(choices = NULL) {
     }
     # Pick randomly from each category
     my_sample = sapply(X = choices, FUN = \(x) sample(words[[x]], size = 1))
-    rank = sample(c(6:29), size = 1) |> as.roman()
+    rank = sample(c(1:29), size = 1) |> as.roman()
     out = paste0( my_sample , collapse = ' ')
     out = paste(out, rank)
     out

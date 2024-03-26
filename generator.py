@@ -22,7 +22,7 @@ def generate_job_title(choices = None):
     # Pick randomly from each category
     my_sample = [sample(words[x])[0] for x in choices]
     my_sample = ' '.join(my_sample)
-    rank = sample([x for x in range(6,30)])[0]
+    rank = sample([x for x in range(1,30)])[0]
     rank = int_to_roman(rank)
     my_sample = my_sample + ' ' + rank
     return my_sample
