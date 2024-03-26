@@ -25,6 +25,10 @@
         ],
     "adjective": [
         "primary",
+        "strange",
+        "lucky",
+        "greater",
+        "persistent",
         "exquisite",
         "flo's chosen",
         "tricia's chosen",
@@ -103,6 +107,13 @@
         ],
     "superlative": [
         "tallest",
+        "richest",
+        "luckiest",
+        "highest",
+        "cleverest",
+        "best",
+        "fastest",
+        "most",
         "noblest",
         "biggest",
         "greatest",
@@ -122,7 +133,7 @@
         "humblest",
         "wisest",
         "brightest",
-        "most principal"
+        "principal"
         ],
     "title": [
         "chancellor",
@@ -184,6 +195,8 @@
     ],
     "suffix": [
         "of reckoning",
+        "of the ages",
+        "of mischief",
         "of devotion",
         "of insurance",
         "of integrity",
@@ -230,6 +243,8 @@
         "of the sun",
         "of the sea",
         "of the earth",
+        "of the land",
+        "of the sky",
         "of the woods",
         "of the realm",
         "of the north",
