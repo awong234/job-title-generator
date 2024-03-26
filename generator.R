@@ -1,7 +1,11 @@
 #!Rscript
 library(jsonlite)
 
-words = jsonlite::fromJSON('words.json')
+if (file.exists('words.json')) {
+    words <- jsonlite::fromJSON("words.json")
+} else {
+    words <- jsonlite::fromJSON("https://raw.githubusercontent.com/awong234/job-title-generator/main/words.json")
+}
 
 generate_job_title = function(choices = NULL) {
     if (is.null(choices)) {

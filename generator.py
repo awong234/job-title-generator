@@ -1,13 +1,17 @@
 #!python
 import json
-import pandas as pd
+import os
+from urllib.request import urlopen
 from random import choices as sample
 from random import seed
 
-pd.set_option('display.max_colwidth', None)
-
-with open('words.json', 'r') as f:
-    words = json.load(f)
+if 'words.json' in os.listdir():
+    with open('words.json', 'r') as f:
+        words = json.load(f)
+else:
+    with urlopen('https://raw.githubusercontent.com/awong234/job-title-generator/main/words.json') as f:
+        text = f.read().decode('utf-8')
+    words = json.loads(text)
 
 def generate_job_title(choices = None):
     if choices is None:
