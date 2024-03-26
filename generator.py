@@ -62,10 +62,6 @@ print(generate_job_title())
 #     titles.append(generate_job_title())
 #     print(i, titles[i])
 
-# titles_df = pd.DataFrame({
-#     "seed": [x for x in range(0, 1000)],
-#     "titles": titles
-# })
-
-# Sorted by length
-# titles_df.sort_values(by='titles', key=lambda x: x.str.len(), inplace=False)
+# titles_sorted = titles.copy()
+# titles_sorted.sort(key = lambda x: len(x))
+# titles_sorted
